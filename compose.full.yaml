@@ -1,0 +1,15 @@
+# Optional Linux/Pi host services. Existing HA installations do not need this.
+# Complete HA onboarding and Music Assistant onboarding before running setup.py.
+services:
+  homeassistant:
+    image: ghcr.io/home-assistant/home-assistant:stable
+    network_mode: host
+    volumes:
+      - ./data/homeassistant:/config
+    restart: unless-stopped
+  musicassistant:
+    image: ghcr.io/music-assistant/server:latest
+    network_mode: host
+    volumes:
+      - ./data/musicassistant:/data
+    restart: unless-stopped

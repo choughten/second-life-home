@@ -1,0 +1,9 @@
+.git
+config.json
+data
+*.zip
+*.pem
+*.key
+.env*
+__pycache__
+tests

@@ -1,0 +1,22 @@
+services:
+  dashboard:
+    build: .
+    ports:
+      - "8089:8089"
+    volumes:
+      - ./config.json:/config/config.json:ro
+    user: "${DASHBOARD_UID:-1000}:${DASHBOARD_GID:-1000}"
+    restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    profiles: [remote]
+    command: tunnel --no-autoupdate --url http://dashboard:8089
+    restart: unless-stopped
+    depends_on:
+      - dashboard

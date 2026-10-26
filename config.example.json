@@ -1,0 +1,20 @@
+{
+  "title": "My Home",
+  "location": "",
+  "timezone": "UTC",
+  "listen_host": "0.0.0.0",
+  "port": 8089,
+  "ha_url": "http://homeassistant.local:8123",
+  "ha_token": "REPLACE_WITH_YOUR_HOME_ASSISTANT_TOKEN",
+  "auth": {"username": "home", "password": "CHOOSE_YOUR_OWN_PASSWORD"},
+  "weather_entity": "weather.home",
+  "calendars": {"calendar.family": "Family"},
+  "cameras": {"camera.front_door": {}},
+  "home_camera": "camera.front_door",
+  "music_players": ["media_player.living_room"],
+  "include_entities": ["light.living_room", "climate.home", "camera.front_door", "media_player.living_room"],
+  "exclude_entities": [],
+  "entity_replacements": {},
+  "favorite_buttons": {},
+  "camera_settings": []
+}

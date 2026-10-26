@@ -2,6 +2,13 @@
 
 Turn an old iPad into a Home Assistant display instead of throwing it away.
 
+DISCLAIMER!!!
+ChatGPT wrote everything and created this repository.
+I have verified nothing beyond that is work for me locally.
+I have not reviewed any code nor tried to follow these instructions from scratch.
+Feel free to provide feedback.
+
+
 A swipeable dashboard for calendars, cameras, lights, thermostats, and music.
 The browser stays lightweight; a Python server talks to Home Assistant and keeps
 credentials off the tablet. Originally built and tested on an **iPad 4 running
